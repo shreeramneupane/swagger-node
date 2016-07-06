@@ -13,11 +13,14 @@
     "swagger-express-mw": "^0.1.0"
   },
   "devDependencies": {
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
     "should": "^7.1.0",
     "supertest": "^1.0.0"
   },
   "scripts": {
     "start": "node app.js",
-    "test": "swagger project test"
+    "test": "swagger project test",
+    "posttest": "istanbul cover _mocha -- test/*/** -R spec"
   }
 }
