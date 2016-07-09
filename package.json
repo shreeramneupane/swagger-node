@@ -14,12 +14,15 @@
   },
   "devDependencies": {
     "istanbul": "^0.4.4",
+    "jshint": "^2.9.2",
     "mocha": "^2.5.3",
     "should": "^7.1.0",
     "supertest": "^1.0.0"
   },
   "scripts": {
+    "hint": "jshint --verbose --show-non-errors api/ config/ models/ test/ app.js",
     "start": "node app.js",
+    "pretest": "npm run hint",
     "test": "swagger project test",
     "posttest": "istanbul cover _mocha -- test/*/** -R spec"
   }
