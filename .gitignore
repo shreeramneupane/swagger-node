@@ -33,5 +33,6 @@ node_modules
 # Runtime configuration for swagger app
 config/runtime.yaml
 
-# Database config
-config/env/db.json
+# Environment config
+config/env/development.json
+config/env/test.json
