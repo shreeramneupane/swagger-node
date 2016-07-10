@@ -2,14 +2,22 @@
 
 var _ = require('lodash');
 var env = process.env.NODE_ENV || 'development';
+var config = null;
 
-try {
-  var config = require(`./${env}.js`);
+if(!process.env.TRAVIS) {
+  readEnvironmentFile();
+  setEnvironmentVariable(config);
 }
-catch (err) {
-  console.log(`Error!! Unable to read file ${env}.js!`);
-  console.log(`Please set the file by taking reference to ${env}.js.sample file.`);
-  throw new Error(err);
+
+function readEnvironmentFile(){
+  try {
+    config = require(`./${env}.js`);
+  }
+  catch (err) {
+    console.log(`Error!! Unable to read file ${env}.js!`);
+    console.log(`Please set the file by taking reference to ${env}.js.sample file.`);
+    throw new Error(err);
+  }
 }
 
 function setEnvironmentVariable(config) {
@@ -23,4 +31,5 @@ function setEnvironmentVariable(config) {
   });
 }
 
-setEnvironmentVariable(config);
+
+
