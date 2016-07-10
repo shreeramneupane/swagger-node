@@ -12,3 +12,7 @@ env:
   - NO_BROWSER_TESTS=true
 
 services: mongodb
+
+before_script:
+  - sleep 15
+  - mongo ToDoTest --eval 'db.addUser("travis", "test");'

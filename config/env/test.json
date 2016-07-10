@@ -1,0 +1,5 @@
+{
+  "dbConfig": {
+    "DB_URI": "mongodb://localhost/ToDoTest"
+  }
+}

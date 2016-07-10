@@ -35,4 +35,3 @@ config/runtime.yaml
 
 # Environment config
 config/env/development.json
-config/env/test.json

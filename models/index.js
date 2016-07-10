@@ -3,14 +3,14 @@
 var env = process.env.NODE_ENV || 'development';
 var fs = require('fs');
 var path = require('path');
-console.log(process.env.NODE_ENV, '(((((((((((((((((((((((((((((((((((((((((((')
-var dbConfig = require(__dirname + '/../config/env/' + env + '.json')["dbConfig"];
+
+var dbConfig = require(__dirname + '/../config/env/' + env + '.json').dbConfig;
 
 // Bring Mongoose into the app
 var mongoose = require('mongoose');
 
 // Build the connection string
-var dbURI = dbConfig["DB_URI"];
+var dbURI = dbConfig.DB_URI;
 
 // Create the database connection
 mongoose.connect(dbURI);
