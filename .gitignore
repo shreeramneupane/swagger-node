@@ -34,4 +34,5 @@ node_modules
 config/runtime.yaml
 
 # Environment config
-config/env/development.json
+config/env/development.js
+config/env/test.js

@@ -1,0 +1,8 @@
+'use strict';
+
+module.exports = {
+  dbConfig: {
+    DB_URI: 'mongodb_test_uri'
+  },
+  PORT: any_port_number
+};

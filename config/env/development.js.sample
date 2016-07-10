@@ -1,0 +1,8 @@
+'use strict';
+
+module.exports = {
+  dbConfig: {
+    DB_URI: 'mongodb_development_uri'
+  },
+  PORT: 10010 // Set 10010 as port number otherwise resolve dependency at api/swagger/swagger.yaml
+};

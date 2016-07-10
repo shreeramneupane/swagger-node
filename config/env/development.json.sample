@@ -1,5 +1,0 @@
-{
-  "dbConfig": {
-    "DB_URI": "mongodb_database_uri"
-  }
-}

@@ -1,4 +1,5 @@
 'use strict';
+require('./config/env/setting');
 require('./models/index');
 
 var SwaggerExpress = require('swagger-express-mw'),
