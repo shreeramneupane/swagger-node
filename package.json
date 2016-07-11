@@ -26,6 +26,6 @@
     "start": "node app.js",
     "pretest": "npm run hint",
     "test": "swagger project test",
-    "posttest": "istanbul cover _mocha -- test/*/** -R spec"
+    "posttest": "istanbul cover _mocha -- test/*/** -R spec && codeclimate-test-reporter < ./coverage/lcov.info"
   }
 }
